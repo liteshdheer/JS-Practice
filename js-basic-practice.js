@@ -1,64 +1,75 @@
+//Arguments 
+function hello(message) {
+    console.log(message);
+    console.log(arguments[1]);
+}
 
+hello("hello",10 ,20);
 
+ function hellos(message,num1, num2) {
+    console.log(message);
+    console.log(arguments[1]);
+}
+
+console.log(hellos.length);
+
+//----Closer function----
+function getItem(input) {
+    var number = input;
+    return function (){
+        return number * 2;
+    }
+}
+
+var cal = getItem(100);
+var cals = getItem(200);
+console.log('clouser function - ',cal());
+console.log('clouser function - ',cals());
+
+//----Filter / map / reduce ----
+
+var array = [1,2,3,5,6]
+
+var findFilter = array.filter(function (value){
+    return value <3;
+})
+
+var useMap = array.map(function (value){
+    return value * 3;
+})
+
+var useReduce = array.reduce(function (total,value){
+    return total * value;
+})
+console.log('filterResult - ',findFilter)
+console.log('mapResult - ',useMap)
+console.log('reduceResult - ',useReduce)
+
+// For Loop
+
+var array = [1,2,3,5,6];
+
+for (var i =0; i < array.length; i++){
+    console.log('loop - ',array[i]);
+};
+
+// IIFE Immediatly invoke fuction exceution
+(function(){
+    console.log("Hello")
+})();
 
 //----Object inharetance-----
 var person = {
     name: 'shyam',
     age: 50
 }
-// console.log('person - ', person);
+
+console.log('person - ', person);
 
 var anotherPerson = Object.create(person);
+
 anotherPerson.location = 'USA'
-// console.log('anotherPerson inheritance -', anotherPerson.age)
-
-//----Closer function----
-// function getItem(input) {
-//     var number = input;
-//     return function (){
-//         return number * 2;
-//     }
-// }
-
-// var cal = getItem(100);
-// var cals = getItem(200);
-// console.log('clouser function - ',cals());
-
-//----Try catch use----
-// var a = 8;
-// var b = 9;
-
-// try {
-//     var c = a*b;
-//     console.log('try - ',c);
-// } catch(error){
-//     console.log('catch - ',error);
-// } finally {
-//     console.log('finally');
-// }
-
-// var x = 7;
-// console.log(x)
-
-// IIFE Immediatly invoke fuction exceution
-// (function(){console.log("Hello")})();
-
-//Arguments 
-// function hello(message) {
-//     console.log(message);
-//     console.log(arguments[1]);
-// }
-
-// hello("hello",10 ,20);
-
-//  function hellos(message,num1, num2) {
-//     console.log(message);
-//     console.log(arguments[1]);
-// }
-
-// console.log(hellos.length);
-
-
+console.log('anotherPerson inheritance -', anotherPerson.age);
 
 // parseInt , toString() , toFixed , parseFloat function
 
@@ -71,6 +82,48 @@ var b = 50.123;
 
 console.log(b.toString());
 console.log(b.toFixed(1));
+
+// setTimeout use for after some sec it code will show
+setTimeout(function(){
+    console.log("It will Run after 4 sec");
+}, 4000);
+
+setTimeout(function(){
+    console.log("It will Run after 2 sec");
+}, 2000);
+
+console.log("Runing");
+
+
+// setInterval use continue run after how much sec given and to stop Interval use setTimeout
+var interval = setInterval(function (){
+    console.log("Clock")
+}, 500);
+
+
+setTimeout(function() {
+    clearInterval(interval);
+}, 3000);
+
+
+//----Try catch use----
+var a = 8;
+var b = 9;
+
+try {
+    var c = a*b;
+    console.log('try - ',c);
+} catch(error){
+    console.log('catch - ',error);
+} finally {
+    console.log('finally');
+}
+
+var x = 7;
+console.log(x)
+
+
+
 
 
 

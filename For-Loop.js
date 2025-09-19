@@ -1,5 +1,7 @@
-var array = [1,2,3,5,6]
-// for loop
+// For Loop
+
+var array = [1,2,3,5,6];
+
 for (var i =0; i < array.length; i++){
     console.log('loop - ',array[i]);
-}
+};

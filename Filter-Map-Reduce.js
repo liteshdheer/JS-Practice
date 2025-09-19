@@ -1,7 +1,5 @@
-
-
-
 //----Filter / map / reduce ----
+
 var array = [1,2,3,5,6]
 
 var findFilter = array.filter(function (value){
