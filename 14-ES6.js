@@ -49,4 +49,29 @@ const myPromise = new Promise((resolved,rejected) => {
         console.log(n);
     }).catch((err) => {console.log(err)});
 
-    
+
+// Spread Operator
+let oldArray = [1,2,3,4,5,6,7,8,];
+let newArray = [...oldArray,54,54,5,55]
+
+console.log(newArray);
+
+
+// Rest parameter
+
+const sum = (...numbers) => {
+console.log(numbers);
+};
+
+sum('showing numbers',12457252,12,12,12,1,21,2,3,3,5,5,4,);
+
+
+const totalSum = (...number) => {
+let total = 0;
+number.forEach((m) => {
+ total += m;
+});
+console.log('total of numbers',total);
+};
+
+totalSum(2,12,12,12,1,21,2,3,3,5,5,4,);
