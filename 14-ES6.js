@@ -87,7 +87,6 @@ const newCourses = courses.map((c) => {
 console.log(courses);
 console.log("LI add in array example",newCourses);
 
-
 // Another example of map function
 const series = [1,2,2,3,2,2,3,2,3,23,2,3,2,32];
 const num = 5;
@@ -96,5 +95,16 @@ const table = series.map((s => s *num));
 
 console.log("table of 5", table);
 
+// Classes in Javascript ES6
 
 
+class person{
+    constructor(uName,uAge){
+        this.name = uName;
+        this.age = uAge;
+    }
+    detai(){
+    console.log(`the age of ${this.name} is ${this.age}`);
+    
+    }
+}
